@@ -44,6 +44,23 @@ function closeInvitation() {
   document.getElementById('invitation-modal').style.display = 'none';
 }
 
+/* Fungsi untuk Menampilkan Foto yang Di-upload ke Dalam Undangan */
+function handleInvitationPhotoUpload(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const imgElement = document.getElementById('preview-user-photo');
+      const placeholderText = document.getElementById('upload-placeholder-text');
+      
+      imgElement.src = e.target.result;
+      imgElement.style.display = 'block';
+      placeholderText.style.display = 'none';
+    }
+    reader.readAsDataURL(file);
+  }
+}
+
 function renderCategories() {
   const categoryNames = { hair: 'Rambut', tops: 'Baju', bottoms: 'Celana/Rok', shoes: 'Sepatu', acc: 'Aksesoris', bg: 'Latar' };
   const tabsContainer = document.getElementById('category-tabs');
