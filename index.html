@@ -63,10 +63,37 @@
   </div>
 
   <!-- MODAL INVITATION BERISI GAMBAR POSTER -->
+<!-- MODAL INVITATION DENGAN FITUR UPLOAD FOTO SENDIRI -->
 <div class="modal-overlay" id="invitation-modal">
   <div class="modal-card invitation-card">
     <button class="close-modal-btn" onclick="closeInvitation()">&times;</button>
+    <h2 style="color: var(--hot-pink); margin-bottom: 10px;">💌 Party Invitation! 💌</h2>
     
+    <!-- Area Poster Undangan & Foto Pengguna -->
+    <div class="invitation-preview-container" id="invitation-preview-area">
+      <!-- Background / Poster Dasar Undangan -->
+      <img src="assets/invitation_poster.png" class="base-poster-img" alt="Poster" onerror="this.src='https://via.placeholder.com/400x550/fe3781/ffffff?text=Invitation+Poster'">
+      
+      <!-- Slot Foto yang di-upload pemain akan muncul di sini secara interaktif -->
+      <div class="user-uploaded-photo-slot" id="user-photo-wrapper">
+        <img id="preview-user-photo" src="" alt="" style="display: none;">
+        <div id="upload-placeholder-text" style="font-size: 0.8rem; color: #888; text-align: center; padding: 10px;">
+          📸 Upload fotomu di sini!
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol Upload Foto Sendiri -->
+    <div style="margin-top: 15px; display: flex; gap: 10px; flex-direction: column;">
+      <label class="white-pink-btn" style="cursor: pointer; width: 100%; text-align: center;">
+        UPLOAD WRECKER'S PHOTO
+        <input type="file" id="upload-invitation-photo" accept="image/*" style="display: none;" onchange="handleInvitationPhotoUpload(event)">
+      </label>
+      
+      <button class="glossy-btn" style="width: 100%; padding: 10px; font-size: 1rem;" onclick="closeInvitation(); startGame();">START DRESS UP!</button>
+    </div>
+  </div>
+</div>
     <!-- Menampilkan Gambar Poster Undangan Buatanmu -->
     <div class="invitation-img-container">
       <img src="assets/invitation_poster.png" alt="Party Invitation Poster" onerror="this.src='https://via.placeholder.com/400x550/fe3781/ffffff?text=Invitation+Poster'">
