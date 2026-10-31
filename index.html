@@ -62,18 +62,19 @@
     </div>
   </div>
 
-  <!-- MODAL INVITATION -->
-  <div class="modal-overlay" id="invitation-modal">
-    <div class="modal-card">
-      <button class="close-modal-btn" onclick="closeInvitation()">&times;</button>
-      <h2>💌 Party Invitation! 💌</h2>
-      <p>
-        Halo Star! Kamu diundang ke pesta spesial <b>POP UP STAR!</b><br><br>
-        Pilihlah outfit dan aksesoris terbaikmu, tata gaya karakternya, lalu simpan fotonya! ✨🌸
-      </p>
-      <button class="glossy-btn" style="margin-top: 20px; width: 100%; padding: 10px;" onclick="closeInvitation(); startGame();">PLAY NOW!</button>
+  <!-- MODAL INVITATION BERISI GAMBAR POSTER -->
+<div class="modal-overlay" id="invitation-modal">
+  <div class="modal-card invitation-card">
+    <button class="close-modal-btn" onclick="closeInvitation()">&times;</button>
+    
+    <!-- Menampilkan Gambar Poster Undangan Buatanmu -->
+    <div class="invitation-img-container">
+      <img src="assets/invitation_poster.png" alt="Party Invitation Poster" onerror="this.src='https://via.placeholder.com/400x550/fe3781/ffffff?text=Invitation+Poster'">
     </div>
+
+    <button class="glossy-btn" style="margin-top: 15px; width: 100%; padding: 10px; font-size: 1rem;" onclick="closeInvitation(); startGame();">START DRESS UP!</button>
   </div>
+</div>
 
   <!-- File JS Terpisah -->
   <script src="script.js"></script>
