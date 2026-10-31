@@ -1,24 +1,24 @@
-/* Data Katalog Item */
+/* ==========================================
+   KATALOG ITEM DENGAN GAMBAR PNG DARI FOLDER ASSETS
+   ========================================== */
 const WARDROBE_DATA = {
   hair: [
-    { id: 'h1', name: 'Rambut Pink', icon: '💇‍♀️', width: 130, autoY: 25, autoX: 85 },
-    { id: 'h2', name: 'Pita Bintang', icon: '🎀', width: 80, autoY: 20, autoX: 110 }
+    { id: 'h1', name: 'Hair 1', img: 'assets/hair_1.png', width: 130, autoY: 25, autoX: 85 },
+    { id: 'h2', name: 'Hair 2', img: 'assets/hair_2.png', width: 130, autoY: 20, autoX: 85 }
   ],
   tops: [
-    { id: 't1', name: 'Kaos Pink Star', icon: '👕', width: 120, autoY: 135, autoX: 90 },
-    { id: 't2', name: 'Jaket Crop', icon: '🧥', width: 130, autoY: 130, autoX: 85 }
+    { id: 't1', name: 'Top 1', img: 'assets/top_1.png', width: 120, autoY: 135, autoX: 90 },
+    { id: 't2', name: 'Top 2', img: 'assets/top_2.png', width: 120, autoY: 130, autoX: 90 }
   ],
   bottoms: [
-    { id: 'b1', name: 'Rok Mini', icon: '👗', width: 100, autoY: 215, autoX: 100 },
-    { id: 'b2', name: 'Celana Denim', icon: '👖', width: 95, autoY: 220, autoX: 102 }
+    { id: 'b1', name: 'Bottom 1', img: 'assets/bottom_1.png', width: 100, autoY: 215, autoX: 100 },
+    { id: 'b2', name: 'Bottom 2', img: 'assets/bottom_2.png', width: 95, autoY: 220, autoX: 102 }
   ],
   shoes: [
-    { id: 's1', name: 'Sepatu Boots', icon: '👢', width: 75, autoY: 340, autoX: 112 },
-    { id: 's2', name: 'Sneakers', icon: '👟', width: 75, autoY: 345, autoX: 112 }
+    { id: 's1', name: 'Shoes 1', img: 'assets/shoes_1.png', width: 75, autoY: 340, autoX: 112 }
   ],
   acc: [
-    { id: 'a1', name: 'Kacamata Love', icon: '🕶️', width: 75, autoY: 65, autoX: 112 },
-    { id: 'a2', name: 'Tas Bintang', icon: '👜', width: 70, autoY: 200, autoX: 60 }
+    { id: 'a1', name: 'Accessory 1', img: 'assets/acc_1.png', width: 75, autoY: 65, autoX: 112 }
   ],
   bg: [
     { id: 'bg1', name: 'Pink Polka', color: '#ffe6f0' },
@@ -75,7 +75,8 @@ function renderItems(category) {
       card.innerHTML = `<span style="font-size: 0.8rem; font-weight: bold; color: #444;">${item.name}</span>`;
       card.onclick = () => document.getElementById('stage-bg').style.backgroundColor = item.color;
     } else {
-      card.innerHTML = `<span style="font-size: 2rem;">${item.icon}</span>`;
+      // Menampilkan gambar PNG icon item di panel wardrobe
+      card.innerHTML = `<img src="${item.img}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/60?text=Item'">`;
       card.onclick = () => spawnItemToStage(item);
     }
 
@@ -94,7 +95,8 @@ function spawnItemToStage(item) {
   itemEl.style.left = item.autoX + 'px';
   itemEl.style.top = item.autoY + 'px';
 
-  itemEl.innerHTML = `<div style="font-size: ${item.width * 0.7}px; text-align: center; line-height: 1;">${item.icon}</div>`;
+  // Menempelkan elemen gambar PNG ke karakter
+  itemEl.innerHTML = `<img src="${item.img}" alt="${item.name}">`;
 
   makeElementDraggable(itemEl);
   itemEl.ondblclick = () => itemEl.remove();
