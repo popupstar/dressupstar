@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POP UP STAR! - Dress Up Game</title>
+  
+  <!-- File CSS Terpisah -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Library Canvas Screenshot -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-pattern"></div>
+
+  <!-- ================= PAGE 1: LANDING PAGE ================= -->
+  <div id="landing-page">
+    <div class="logo-container">
+      <img id="main-logo-img" src="pop_up_star_logo.png" alt="POP UP STAR! Logo" onerror="this.src='https://via.placeholder.com/350x200/fe3781/ffffff?text=POP+UP+STAR!'">
+    </div>
+
+    <div class="btn-group-landing">
+      <button class="glossy-btn" onclick="startGame()">START</button>
+      <button class="glossy-btn invitation" onclick="openInvitation()">INVITATION LETTER</button>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 2: DRESS UP ROOM ================= -->
+  <div id="game-page">
+    <div class="game-header">
+      <img src="pop_up_star_logo.png" class="small-logo" alt="Logo" onerror="this.src='https://via.placeholder.com/120x40/fe3781/ffffff?text=POP+UP+STAR!'">
+      <div class="header-actions">
+        <button class="white-pink-btn" onclick="resetOutfit()">RESET</button>
+        <button class="white-pink-btn" onclick="downloadAvatar()">SAVE 📸</button>
+      </div>
+    </div>
+
+    <!-- BOX UTAMA RUMAH (MAIN CONTAINER) -->
+    <div class="main-dressup-box">
+      
+      <!-- BOX 1 (ATAS): KARAKTER AVATAR -->
+      <div class="box-top-character">
+        <div class="avatar-stage" id="avatar-stage">
+          <div class="stage-bg" id="stage-bg"></div>
+          <img id="base-char-img" class="base-character" src="Tak_berjudul306.png" alt="Base Character" onerror="this.src='https://via.placeholder.com/200x400/ff77ad/ffffff?text=Base+Character'">
+        </div>
+      </div>
+
+      <!-- BOX 2 (BAWAH): ITEMS & OUTFIT -->
+      <div class="box-bottom-items">
+        <div class="category-tabs" id="category-tabs"></div>
+        <div class="items-grid" id="items-grid"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL INVITATION -->
+  <div class="modal-overlay" id="invitation-modal">
+    <div class="modal-card">
+      <button class="close-modal-btn" onclick="closeInvitation()">&times;</button>
+      <h2>💌 Party Invitation! 💌</h2>
+      <p>
+        Halo Star! Kamu diundang ke pesta spesial <b>POP UP STAR!</b><br><br>
+        Pilihlah outfit dan aksesoris terbaikmu, tata gaya karakternya, lalu simpan fotonya! ✨🌸
+      </p>
+      <button class="glossy-btn" style="margin-top: 20px; width: 100%; padding: 10px;" onclick="closeInvitation(); startGame();">PLAY NOW!</button>
+    </div>
+  </div>
+
+  <!-- File JavaScript Terpisah -->
+  <script src="script.js"></script>
+</body>
+</html>
