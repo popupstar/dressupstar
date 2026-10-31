@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POP UP STAR! - Dress Up Game</title>
+  <title>POP UP STAR!</title>
+  
+  <!-- Import Font Modern dari Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
   
   <!-- File CSS Terpisah -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Library Canvas Screenshot -->
+  <!-- Library Screenshot -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
   <div class="bg-pattern"></div>
 
-  <!-- ================= PAGE 1: LANDING PAGE ================= -->
+  <!-- PAGE 1: LANDING PAGE -->
   <div id="landing-page">
     <div class="logo-container">
       <img id="main-logo-img" src="pop_up_star_logo.png" alt="POP UP STAR! Logo" onerror="this.src='https://via.placeholder.com/350x200/fe3781/ffffff?text=POP+UP+STAR!'">
@@ -27,7 +32,7 @@
     </div>
   </div>
 
-  <!-- ================= PAGE 2: DRESS UP ROOM ================= -->
+  <!-- PAGE 2: DRESS UP ROOM -->
   <div id="game-page">
     <div class="game-header">
       <img src="pop_up_star_logo.png" class="small-logo" alt="Logo" onerror="this.src='https://via.placeholder.com/120x40/fe3781/ffffff?text=POP+UP+STAR!'">
@@ -37,7 +42,7 @@
       </div>
     </div>
 
-    <!-- BOX UTAMA RUMAH (MAIN CONTAINER) -->
+    <!-- BOX UTAMA DRESS-UP -->
     <div class="main-dressup-box">
       
       <!-- BOX 1 (ATAS): KARAKTER AVATAR -->
@@ -48,7 +53,7 @@
         </div>
       </div>
 
-      <!-- BOX 2 (BAWAH): ITEMS & OUTFIT -->
+      <!-- BOX 2 (BAWAH): ITEMS & OUTFIT (DENGAN PINK GLOW SHADOW) -->
       <div class="box-bottom-items">
         <div class="category-tabs" id="category-tabs"></div>
         <div class="items-grid" id="items-grid"></div>
@@ -70,7 +75,7 @@
     </div>
   </div>
 
-  <!-- File JavaScript Terpisah -->
+  <!-- File JS Terpisah -->
   <script src="script.js"></script>
 </body>
 </html>
