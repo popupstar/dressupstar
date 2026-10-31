@@ -2,10 +2,15 @@
    KATALOG ITEM DENGAN GAMBAR PNG DARI FOLDER ASSETS
    ========================================== */
 const WARDROBE_DATA = {
+  const WARDROBE_DATA = {
   hair: [
     { id: 'h1', name: 'Hair 1', img: 'assets/hair_1.png', width: 130, autoY: 25, autoX: 85 },
-    { id: 'h2', name: 'Hair 2', img: 'assets/hair_2.png', width: 130, autoY: 20, autoX: 85 }
+    { id: 'h2', name: 'Hair 2', img: 'assets/hair_2.png', width: 130, autoY: 20, autoX: 85 },
+    { id: 'h3', name: 'Hair 3', img: 'assets/hair_3.png', width: 130, autoY: 20, autoX: 85 },
+    { id: 'h4', name: 'Hair 4', img: 'assets/hair_4.png', width: 130, autoY: 20, autoX: 85 },
+    { id: 'h5', name: 'Hair 5', img: 'assets/hair_5.png', width: 130, autoY: 20, autoX: 85 }
   ],
+};
   tops: [
     { id: 't1', name: 'Top 1', img: 'assets/top_1.png', width: 120, autoY: 135, autoX: 90 },
     { id: 't2', name: 'Top 2', img: 'assets/top_2.png', width: 120, autoY: 130, autoX: 90 }
